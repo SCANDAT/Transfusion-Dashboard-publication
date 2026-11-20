@@ -1,0 +1,12 @@
+.summary-download button { border: 1px solid #cbd7d0; border-radius: 4px; background: white; padding: 7px 10px; font-size: .73rem; color: #31594d; white-space: nowrap; }
+.summary-download button:hover:not(:disabled) { background: #edf3ed; }
+.summary-download button:disabled { color: #788980; cursor: default; }
+.summary-download [role=alert] { display: block; font-size: .74rem; color: #795643; margin-top: 6px; }
+.figure-heading-actions { display: flex; align-items: flex-end; flex-direction: column; gap: 9px; }
+.figure-heading-actions > span { font-size: .75rem; color: #52686b; }
+.component-overview-heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 18px; }
+@media (max-width: 720px) {
+  .figure-heading-actions { align-items: flex-start; }
+  .component-overview-heading { flex-direction: column; gap: 0; }
+  .component-overview-heading .summary-download { margin-bottom: 16px; }
+}

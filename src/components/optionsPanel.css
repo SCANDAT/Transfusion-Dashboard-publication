@@ -1,0 +1,10 @@
+.display-options { display: flex; align-items: flex-end; gap: 18px; margin: 8px 0 16px; }
+.display-options-content { flex: 1; min-width: 0; }
+.display-options .controls { padding: 0; }
+.display-options > .text-button { white-space: nowrap; }
+.main-options { border-bottom: 1px solid #dae3dd; padding-bottom: 12px; margin: 12px 0 21px; }
+.sensitivity-options { margin: 0; gap: 12px; }
+@media (max-width: 720px) {
+  .display-options { align-items: flex-start; flex-wrap: wrap; gap: 4px; }
+  .display-options-content { flex-basis: 100%; }
+}

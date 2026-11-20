@@ -1,0 +1,56 @@
+.all-pairs-overview { margin-top: 10px; }
+.all-pairs-definition, .all-pairs-note { margin: 5px 0 9px; color: #52696b; font-size: 12px; line-height: 1.4; }
+.all-pairs-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; align-items: start; }
+.all-pairs-card { grid-column: span 1; min-width: 0; border: 1px solid #dce5df; background: white; border-radius: 5px; padding: 10px 10px 4px; }
+.all-pairs-card-wide { grid-column: span 1; }
+.all-pairs-card-heading { min-height: 36px; display: flex; align-items: start; justify-content: space-between; gap: 8px; margin-bottom: 3px; }
+.all-pairs-card h3 { margin: 0; font-size: 14px; line-height: 1.25; color: #2b4d44; font-weight: 600; }
+.all-pairs-card h3 small { display: block; margin-top: 3px; font-size: 12px; font-weight: 400; }
+.all-pairs-overall { font-size: 11px; white-space: nowrap; color: #52696b; padding-top: 2px; font-variant-numeric: tabular-nums; }
+.all-pairs-card .estimate-forest { display: flex; flex-direction: column; padding: 0; }
+.all-pairs-card .estimate-forest.has-holm .estimate-forest-heading,
+.all-pairs-card .estimate-forest.has-holm .estimate-forest-row,
+.all-pairs-card .estimate-forest.has-holm .estimate-forest-axis { grid-template-columns: 110px minmax(92px, 1fr) 88px 44px; gap: 6px; }
+.all-pairs-card-wide .estimate-forest.has-holm .estimate-forest-heading,
+.all-pairs-card-wide .estimate-forest.has-holm .estimate-forest-row,
+.all-pairs-card-wide .estimate-forest.has-holm .estimate-forest-axis { grid-template-columns: 110px minmax(92px, 1fr) 88px 44px; }
+.all-pairs-card .estimate-forest-heading { font-size: 11px; padding: 3px 0 5px; }
+.all-pairs-card .estimate-forest-row { min-height: 62px; border-bottom: 1px solid #f0f3f1; }
+.all-pairs-card .estimate-label { font-size: 13px; line-height: 1.2; }
+.all-pairs-card .estimate-p { font-size: 12px; line-height: 1.2; }
+.estimate-label-stacked { display: flex; flex-direction: column; align-items: flex-start; gap: 2px; }
+.estimate-label-stacked .estimate-comparison-vs { font-size: 11px; line-height: 1; color: #63766e; font-weight: 400; }
+.all-pairs-card .estimate-number { flex-direction: column; justify-content: center; align-items: flex-end; gap: 3px; white-space: nowrap; }
+.all-pairs-card .estimate-number strong { font-size: 12px; }
+.all-pairs-card .estimate-number small { font-size: 11px; line-height: 1.2; }
+.all-pairs-card .estimate-number strong + small::before { content: '('; }
+.all-pairs-card .estimate-number strong + small::after { content: ')'; }
+.all-pairs-card .estimate-interval { height: 56px; }
+.all-pairs-card .estimate-forest.has-holm .estimate-forest-axis { display: grid; }
+.estimate-forest.stacked-comparisons .forest-ticks { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.estimate-forest.stacked-comparisons .forest-ticks > :first-child { justify-self: start; }
+.estimate-forest.stacked-comparisons .forest-ticks > :nth-child(2) { justify-self: center; }
+.estimate-forest.stacked-comparisons .forest-ticks > :last-child { justify-self: end; }
+.all-pairs-scroll-note { display: none; }
+.all-pairs-card .forest-ticks { min-height: 20px; font-size: 11px; }
+.all-pairs-card .estimate-forest > .chart-enlarge { order: 2; align-self: flex-start; height: 22px; margin: 0; padding: 2px 0; border: 0; background: transparent; font-size: 11px; text-decoration: underline; }
+.all-pairs-details { display: block; position: relative; height: 22px; margin: -22px 0 0 95px; border: 0; background: transparent; padding: 2px 0; font-size: 11px; color: #2f6258; text-decoration: underline; cursor: pointer; }
+.all-pairs-unavailable { min-height: 35px; font-size: 12px; line-height: 1.4; color: #637870; margin: 8px 0; }
+@media (max-width: 1260px) {
+  .all-pairs-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .all-pairs-card, .all-pairs-card-wide { grid-column: span 1; }
+  .all-pairs-card[data-factor="wdy_donation"] { grid-column: 1 / -1; }
+}
+@media (max-width: 760px) {
+  .all-pairs-grid { grid-template-columns: minmax(0, 1fr); }
+  .all-pairs-scroll-note { display: block; margin: 3px 0 8px; font-size: 12px; color: #52696b; }
+  .all-pairs-card { grid-column: 1; overflow-x: auto; }
+  .all-pairs-card .estimate-forest { min-width: 360px; }
+  .all-pairs-card .estimate-forest.has-holm .estimate-forest-heading > :nth-child(2),
+  .all-pairs-card .estimate-forest.has-holm .estimate-forest-heading > :nth-child(4) { display: block; }
+  .all-pairs-card .estimate-forest-heading > :nth-child(3) { grid-column: auto; }
+  .all-pairs-card .estimate-forest-row { padding: 0; border-bottom: 0; }
+  .all-pairs-card .estimate-label, .all-pairs-card .estimate-number,
+  .all-pairs-card .estimate-interval, .all-pairs-card .estimate-p { grid-column: auto; grid-row: auto; }
+  .all-pairs-card .estimate-p::before { content: none; }
+}

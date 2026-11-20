@@ -1,0 +1,36 @@
+{
+  "MAIN": {
+    "1": "All eligible events"
+  },
+  "DonorHb_Cat": {
+    "1": "Below 125",
+    "2": "125 to below 140",
+    "3": "140 to below 155",
+    "4": "155 to below 170",
+    "5": "170 or above"
+  },
+  "Storage_Cat": {
+    "1": "0 to under 10",
+    "2": "10 to under 20",
+    "3": "20 to under 30",
+    "4": "30 to under 40",
+    "5": "40 or more"
+  },
+  "DonorSex": {
+    "1": "Male",
+    "2": "Female"
+  },
+  "DonorParity_Female": {
+    "0": "Nulliparous",
+    "1": "Parous"
+  },
+  "wdy_donation": {
+    "1": "Sunday",
+    "2": "Monday",
+    "3": "Tuesday",
+    "4": "Wednesday",
+    "5": "Thursday",
+    "6": "Friday",
+    "7": "Saturday"
+  }
+}

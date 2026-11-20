@@ -1,0 +1,140 @@
+.component-presentation-switch { display: inline-flex; gap: 3px; padding: 3px; border: 1px solid #cbd7d0; border-radius: 5px; background: #edf2ed; margin: 2px 0 17px; }
+.component-presentation-switch button { border: 0; border-radius: 3px; background: transparent; color: #496469; padding: 9px 15px; font-size: .8rem; }
+.component-presentation-switch button[aria-pressed=true] { background: white; color: #244f4c; box-shadow: 0 1px 3px #21352a18; }
+.component-overview { background: white; border: 1px solid #dce4df; border-radius: 5px; padding: 23px 22px 17px; margin: 20px 0; }
+.component-overview-heading h3 { font-size: 1.05rem; font-weight: 600; margin: 0 0 5px; }
+.component-overview-heading p, .component-overview-key, .component-overview-instruction, .component-overview-note, .component-overview-notes { color: #50646a; font-size: .78rem; line-height: 1.6; }
+.component-overview-heading p { margin: 0 0 14px; }
+.component-overview-key { margin: 0 0 6px; }
+.component-overview-instruction { margin: 0 0 14px; }
+.component-overview-progress { color: #52696b; font-size: .76rem; margin: 9px 0; }
+.component-overview-scroll { width: 100%; overflow-x: auto; overscroll-behavior-x: contain; container-type: inline-size; }
+.component-overview-scroll:focus-visible { outline: 3px solid #ac7b32; outline-offset: 3px; }
+.component-overview-table { width: 100%; min-width: 1050px; border-collapse: separate; border-spacing: 0; table-layout: fixed; font-variant-numeric: tabular-nums; }
+.component-overview-table .component-overview-label-column { width: 200px; }
+.component-overview-table th, .component-overview-table td { padding: 0; border: 0; vertical-align: top; }
+.component-overview-table thead th { font-weight: 400; text-align: center; padding: 9px 7px 17px; border-bottom: 1px solid #dce4df; line-height: 1.35; }
+.component-overview-table thead th:first-child { vertical-align: bottom; text-align: left; font-size: .74rem; }
+.component-overview-table thead strong { display: block; font-size: .91rem; font-weight: 650; margin-bottom: 5px; }
+.component-overview-outcome-name { display: block; min-height: 35px; font-size: .67rem; color: #496469; }
+.component-overview-unit { display: block; margin-top: 4px; font-size: .64rem; color: #627573; }
+.component-overview-factor th { padding: 8px 6px 4px; border-top: 1px solid #e0e8e2; text-align: left; color: #294b48; font-size: .79rem; font-weight: 600; }
+.component-overview-factor-heading { position: sticky; left: 6px; display: inline-flex; align-items: baseline; max-width: calc(100cqw - 12px); }
+.component-overview-category-list { position: sticky; left: 0; z-index: 1; background: white; box-shadow: 4px 0 6px -6px #567168; font-weight: 400; }
+.component-overview-category-list ul { padding: 6px 8px 6px 6px; margin: 0; list-style: none; }
+.component-overview-category-list li { height: 24px; line-height: 24px; font-size: .72rem; color: #466167; text-align: left; white-space: nowrap; }
+.component-overview-table tbody td { border-left: 1px solid #f0f3f0; padding: 0 4px 8px; }
+.component-overview-panel { position: relative; display: flex; width: 100%; align-items: center; justify-content: center; border: 1px solid transparent; border-radius: 3px; padding: 0; margin: 0; color: #50646a; background: transparent; }
+.component-overview-panel:not(:disabled):hover { border-color: #cbd9d0; background: #f6f9f6; }
+.component-overview-panel:focus-visible { position: relative; outline: 3px solid #ac7b32; outline-offset: -2px; }
+.component-overview-panel:disabled { cursor: default; }
+.component-overview-panel svg { display: block; width: 100%; overflow: visible; flex: 1; }
+.component-overview-zero { stroke: #bac8c0; stroke-width: 1; stroke-dasharray: 3 3; }
+.component-overview-axis { stroke: #afbeb5; stroke-width: 1; }
+.component-overview-missing { fill: #7c8c85; font-size: 12px; }
+.component-overview-unavailable { display: block; font-size: .65rem; padding: 5px 6px; line-height: 1.4; text-align: center; }
+.component-overview-unavailable strong { display: block; color: #647970; font-size: .68rem; font-weight: 500; margin-bottom: 5px; }
+.component-overview-unavailable > span { display: block; }
+.component-overview-cell-loading, .component-overview-no-scale { font-size: .68rem; color: #6b7c76; }
+.component-overview-table tfoot th { text-align: left; padding: 12px 6px; font-size: .7rem; color: #52696b; font-weight: 400; position: sticky; left: 0; background: white; z-index: 1; }
+.component-overview-table tfoot td { padding: 9px 4px 3px; text-align: center; border-top: 1px solid #e0e8e2; }
+.component-overview-table tfoot svg { display: block; width: 100%; }
+.component-overview-table tfoot text { fill: #52696b; font-size: 10px; font-family: inherit; }
+.component-overview-note { border-top: 1px solid #e0e8e2; padding-top: 12px; margin: 9px 0 0; }
+.component-overview-notes { margin-top: 12px; }
+.component-overview-notes summary { color: #355951; }
+.component-overview-notes p { margin: 9px 0; }
+.component-overview-loading { min-height: 180px; display: grid; place-items: center; color: #617573; font-size: .85rem; }
+.component-overview-accessible { position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+@media (max-width: 700px) {
+  .component-overview { padding: 18px 12px 15px; }
+  .component-overview-table .component-overview-label-column { width: 200px; }
+  .component-presentation-switch { display: flex; width: 100%; }
+  .component-presentation-switch button { flex: 1; }
+}
+
+.comparison-controls:focus-visible { outline: 3px solid #ac7b32; outline-offset: 5px; }
+
+.component-overview-category-list li.component-reference-label { font-size: .66rem; color: #6a7872; }
+
+.component-results .intro h1 { margin-bottom: 14px; }
+.comparison-heading { display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+.comparison-heading h2 { font-size: 1.1rem; font-weight: 600; margin: 0; }
+.comparison-heading .component-presentation-switch { margin: 0; }
+.comparison-heading .component-presentation-switch button { padding: 6px 12px; }
+.comparison-options { display: flex; align-items: flex-end; gap: 18px; margin: 8px 0 12px; }
+.comparison-options .controls { flex: 1; padding: 0; gap: 16px; max-width: 700px; }
+.comparison-options .controls select { height: 34px; margin-top: 4px; }
+.comparison-options > button { white-space: nowrap; }
+.comparison-options + .component-overview { margin-top: 10px; }
+.component-overview { padding: 14px 16px 10px; margin: 12px 0; }
+.component-overview-heading p { margin: 0 0 7px; }
+.component-overview-heading .summary-download { margin-bottom: 5px; }
+.component-overview-key, .component-overview-instruction { font-size: .72rem; line-height: 1.45; margin: 0 0 5px; }
+.component-overview-instruction { margin-bottom: 8px; }
+.component-overview-table thead th { padding: 6px 5px 8px; }
+.component-overview-table thead strong { margin-bottom: 3px; }
+.component-overview-outcome-name { min-height: 30px; font-size: .69rem; }
+.component-overview-unit { font-size: .69rem; margin-top: 2px; }
+.component-overview-factor th { padding: 6px 6px 3px; font-size: .76rem; }
+.component-overview-category-list ul { padding: 5px 8px 3px 6px; }
+.component-overview-category-list li { height: 20px; line-height: 20px; font-size: .71rem; }
+.component-overview-category-list li.component-reference-label { font-size: .69rem; }
+.component-overview-table tbody td { padding-bottom: 4px; }
+.component-overview-unavailable { font-size: .69rem; padding: 4px; }
+.component-overview-unavailable strong { font-size: .69rem; margin-bottom: 0; }
+.component-overview-table tfoot th { padding: 8px 6px; }
+.component-overview-table tfoot td { padding-top: 5px; }
+.component-overview-note { font-size: .7rem; padding-top: 7px; margin-top: 5px; }
+.component-overview-notes { font-size: .72rem; margin-top: 7px; }
+@media (max-width: 720px) {
+  .comparison-heading { align-items: flex-start; flex-direction: column; gap: 10px; }
+  .comparison-options { flex-wrap: wrap; gap: 4px; }
+  .comparison-options .controls { flex-basis: 100%; }
+  .component-overview { padding: 14px 10px 10px; }
+  .component-overview-instruction::after { content: ' Scroll horizontally for all outcomes.'; }
+}
+
+.component-overview-table tfoot text { font-size: 11px; }
+
+@media (min-width: 1000px) {
+  .component-results .intro h1 { font-size: 1.75rem; margin-bottom: 8px; }
+}
+.comparison-heading .component-presentation-switch button { padding-top: 4px; padding-bottom: 4px; }
+.comparison-view .comparison-options { margin: 4px 0 6px; }
+.comparison-options .controls select { height: 32px; }
+.component-overview { padding-top: 10px; padding-bottom: 8px; }
+.component-overview-heading .summary-download button { padding-top: 5px; padding-bottom: 5px; }
+.component-overview-key { margin-bottom: 3px; line-height: 1.4; }
+.component-overview-instruction { margin-bottom: 4px; line-height: 1.4; }
+.component-overview-table thead th { padding-top: 4px; padding-bottom: 4px; line-height: 1.2; }
+.component-overview-table thead strong { margin-bottom: 5px; white-space: nowrap; }
+.component-overview-outcome-name { min-height: 2.6em; font-size: .69rem; line-height: 1.3; white-space: normal; }
+.component-overview-outcome-name > span { display: block; white-space: nowrap; }
+.component-overview-unit { margin-top: 5px; }
+.component-overview-factor th { padding-top: 2px; padding-bottom: 0; font-size: .70rem; white-space: nowrap; }
+.component-overview-category-list ul { padding-top: 3px; padding-bottom: 1px; }
+.component-overview-category-list li { height: 20px; line-height: 20px; }
+.component-overview-table tbody td { padding-bottom: 0; }
+.component-overview-table tfoot td { padding-top: 3px; padding-bottom: 1px; }
+.component-overview-table tfoot th { padding-top: 4px; padding-bottom: 4px; }
+
+.outcome-pills { display: flex; align-items: center; flex-wrap: wrap; gap: 7px; margin: 11px 0 7px; }
+.outcome-pills button { min-width: 57px; border: 1px solid #cbd7d0; border-radius: 18px; padding: 6px 12px; background: white; font-size: .82rem; font-weight: 600; }
+.outcome-pills button[aria-pressed=true] { border-width: 2px; padding: 5px 11px; }
+.outcome-pills > span { margin-left: 10px; font-size: .78rem; color: #52686b; }
+@media (max-width: 720px) { .outcome-pills > span { flex-basis: 100%; margin: 2px 0 0; } }
+
+.component-overview-factor > th { position: sticky; left: 0; z-index: 2; background: white; }
+.component-overview-factor > td { border-left: 0; border-top: 1px solid #e0e8e2; padding: 2px 4px 0; vertical-align: middle; text-align: center; }
+.component-overview-overall { font-size: 11px; line-height: 1.3; color: #52696b; white-space: nowrap; font-variant-numeric: tabular-nums; }
+
+@media (min-width: 1000px) {
+  .component-results .intro h1 { font-size: 1.5rem; margin-bottom: 6px; }
+  .comparison-view .comparison-options { margin-top: 2px; }
+  .component-overview { padding-top: 8px; }
+}
+
+.component-overview-heading h3 { font-size: 15px; line-height: 1.3; margin: 0 0 3px; }
+.component-overview-heading .component-overview-scope { font-size: 11px; line-height: 1.35; margin: 0 0 6px; }
+.component-overview-explanation { border-top: 1px solid #e0e8e2; padding-top: 7px; margin-top: 5px; }

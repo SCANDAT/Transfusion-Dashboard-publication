@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- White circle background -->
+  <circle cx="16" cy="16" r="15" fill="white" stroke="#ddd" stroke-width="1"/>
+  <!-- Red blood drop -->
+  <path d="M16 5 C16 5 9 14 9 19 C9 23.5 12 27 16 27 C20 27 23 23.5 23 19 C23 14 16 5 16 5 Z" fill="#dc2626"/>
+</svg>

@@ -1,0 +1,31 @@
+{
+  "Protocol": "MONDAY_FRIDAY_POSTFIT_V1",
+  "CategoryCodes": [
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "ReferenceCategoryCode": 2,
+  "BaselineMinute": -60,
+  "EndpointMinute": 60,
+  "GridMinutes": {
+    "Start": -720,
+    "End": 720,
+    "Step": 1
+  },
+  "Alpha": 0.05,
+  "HolmFamilySize": 10,
+  "ScalarDFMethod": "CONTRAST_SATTERTHWAITE",
+  "JointDFMethod": "HTZ",
+  "EndpointJointRole": "MONDAY_FRIDAY_ENDPOINT_CHANGE_EQUALITY",
+  "TrajectoryJointRole": "MONDAY_FRIDAY_TRAJECTORY_INTERACTION",
+  "MeanCorrectionScope": "EXPLICIT_CASE_PLAN_AND_BOUND_RESIDUAL_MISMATCH_ONLY",
+  "VarianceParameters": "HELD_AT_ORIGINAL_ESTIMATES",
+  "ObservationsAndDesign": "UNCHANGED_FULL_FITTED_POPULATION",
+  "WeekendCounts": "RETAIN",
+  "WeekendPhysiology": "EXCLUDE_FROM_PUBLIC_DONATION_DAY_STRATA",
+  "ResidualScalePolicy": "FULL_PRECOMPRESSION_WHITENED_RESIDUAL_PLUS_ACTIVE_FITTED_NORM",
+  "ResidualToleranceFactor": 2e-08
+}

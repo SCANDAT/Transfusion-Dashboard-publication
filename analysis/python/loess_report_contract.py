@@ -1,0 +1,26 @@
+"""LOESS fit settings, evaluation grid and output fields for each outcome."""
+PROTOCOL = 'RBC_LOESS_REPORT_V1'
+APPROVAL = 'DIRECT_DEGREE2_LOESS'
+METHOD = 'DIRECT_LINEAR_DISPLAY_V1'
+OUTCOMES = ('ARTm', 'ARTs', 'ARTd', 'HR', 'FIO2', 'SPO2', 'VE')
+SPANS = tuple(range(10, 91))
+CONTEXT = tuple('RunId AnalysisSpecId CohortMode InputSnapshotId CodeHash ConfigHash PreparationReceiptHash ReportRunId ReportCodeHash ReportConfigHash ExportId ExportCodeHash PopulationId DisclosureStatus'.split())
+PREDICTIONS = tuple('LoessReportId MethodId VitalCode SpanPercent GridId GridPointId TimeFromTransfusion ValueScale Unit UnitStatus Estimate PointStatus IntervalStatus SupportStatus DisclosureStatus MethodAdoptionStatus'.split())
+METADATA = CONTEXT + tuple('LoessReportId Protocol MethodId MethodAdoptionStatus VitalCode Unit UnitStatus ScaleDefinition PopulationDefinition InputWeighting ExactTimeGrouping ThinningRule GridId IntervalStatus DefaultSpanPercent SpanMin SpanMax Degree Iterations ThinningSeed GridMin GridMax GridStep'.split())
+STATUS = tuple('LoessReportId VitalCode SpanPercent FitStatus PointStatusPolicy'.split())
+SUPPORT = tuple('LoessReportId VitalCode SupportStage CountUnit OverlapSemantics DisclosureStatus NRows NKnownPersons NKnownEvents NAvailableOutcome NExactTimeGroups NRetainedTimeGroups'.split())
+MANIFEST = tuple('Protocol LoessReportId ExportId ExportCodeHash Role FileName NumericFormat TextEncoding ExportStatus RowCount ColumnCount'.split())
+PUBLIC_ROLES = ('loess_metadata', 'loess_status', 'loess_support', 'loess_predictions')
+PRIVATE_ROLES = ('loess_scaling', 'loess_timegroups', 'loess_bernoulli', 'loess_retained', 'loess_direct')
+NATIVE_ROLES = PRIVATE_ROLES + PUBLIC_ROLES
+SCHEMAS = {'loess_metadata': METADATA, 'loess_status': STATUS, 'loess_support': SUPPORT, 'loess_predictions': PREDICTIONS, 'loess_manifest': MANIFEST}
+NUMERIC = {'loess_metadata': tuple('DefaultSpanPercent SpanMin SpanMax Degree Iterations ThinningSeed GridMin GridMax GridStep'.split()), 'loess_status': ('SpanPercent',), 'loess_support': tuple('NRows NKnownPersons NKnownEvents NAvailableOutcome NExactTimeGroups NRetainedTimeGroups'.split()), 'loess_predictions': tuple('SpanPercent GridPointId TimeFromTransfusion Estimate'.split()), 'loess_manifest': ('RowCount', 'ColumnCount')}
+ROWS = {'loess_metadata': 7, 'loess_status': 567, 'loess_support': 35, 'loess_predictions': 7 * 81 * 1441 * 2}
+SUPPORT_STAGES = ('GLOBAL_SCALING_SCOPE', 'DISPLAY_WINDOW_AVAILABLE_OUTCOME', 'POST_BERNOULLI', 'POST_EVERY_THIRD', 'ACTUAL_NONMISSING_LOESS_INPUT')
+AVAILABLE = ('AVAILABLE_EXACT_KNOT', 'AVAILABLE_LINEAR_FROM_DIRECT')
+POINT_STATUSES = AVAILABLE + ('UNAVAILABLE_NO_RETAINED_INPUT', 'OUTSIDE_RETAINED_SUPPORT', 'FIT_UNAVAILABLE', 'NATIVE_TRANSFORM_UNAVAILABLE', 'UNAVAILABLE_NO_INPUT', 'UNAVAILABLE_ZERO_OR_UNDEFINED_SCALE', 'INSUFFICIENT_SUPPORT')
+FIT_STATUSES = ('DIRECT_COMPLETED', 'UNAVAILABLE_NO_INPUT', 'UNAVAILABLE_ZERO_OR_UNDEFINED_SCALE', 'INSUFFICIENT_SUPPORT')
+METHOD_CONSTANTS = {'Protocol': PROTOCOL, 'MethodId': METHOD, 'MethodAdoptionStatus': APPROVAL, 'Unit': 'NATIVE', 'UnitStatus': 'SOURCE_UNIT_UNCONFIRMED', 'ScaleDefinition': 'PREWINDOW_SOURCE_ROW_GLOBAL_MEAN_SAMPLE_SD', 'PopulationDefinition': 'PRIMARY_ACCEPTED_EVENT_ADMISSION_PREWINDOW', 'InputWeighting': 'EQUAL_RETAINED_EXACT_TIME_GROUPS', 'ExactTimeGrouping': 'EXACT_UNROUNDED_MINUTES', 'ThinningRule': 'BERNOULLI_50000_SEED1234_THEN_EVERY_THIRD', 'GridId': 'MINUTE_-720_720_STEP_1', 'IntervalStatus': 'NOT_EXPORTED_DESCRIPTIVE', 'DefaultSpanPercent': 30.0, 'SpanMin': 10.0, 'SpanMax': 90.0, 'Degree': 2.0, 'Iterations': 1.0, 'ThinningSeed': 1234.0, 'GridMin': -720.0, 'GridMax': 720.0, 'GridStep': 1.0}
+CHARS = {role: tuple((x for x in columns if x not in NUMERIC[role])) for role, columns in SCHEMAS.items()}
+APPROVED_LOESS_CONFIG = {'Protocol': PROTOCOL, 'Approval': APPROVAL, 'MethodId': METHOD, 'PopulationId': 'PRIMARY', 'Outcomes': list(OUTCOMES), 'SpanPercents': list(SPANS), 'DefaultSpanPercent': 30, 'GridMinutes': {'Start': -720, 'End': 720, 'Step': 1}, 'Degree': 2, 'Iterations': 1, 'RegressorScale': 'NONE', 'NativeFitAlgorithm': 'DIRECT', 'NativeInference': 'ALL_ALPHA_0.05_PRIVATE', 'PublicIntervals': 'NONE', 'InputScope': 'PRIMARY_AVAILABLE_SOURCE_ROWS_PREWINDOW', 'Scaling': 'SOURCE_ROW_GLOBAL_MEAN_SAMPLE_SD_BEFORE_DISPLAY', 'TimeGroups': 'EXACT_UNROUNDED_MINUTES', 'Thinning': 'BERNOULLI_50000_SEED1234_THEN_EVERY_THIRD', 'Interpolation': 'ADJACENT_AVAILABLE_FITTED_KNOTS_LINEAR_NO_EXTRAPOLATION', 'UnitStatus': 'SOURCE_UNIT_UNCONFIRMED', 'SupplementRequired': True}
+APPROVED_LOESS_CONFIG['SparseSpanPolicy'] = 'INSUFFICIENT_IF_NFIT_TIMES_SPANPERCENT_LT_300'

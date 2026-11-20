@@ -1,0 +1,11 @@
+{
+  "sas_executable": "<sas-executable>",
+  "sas_config_file": "<utf8-sas-configuration>",
+  "input_directory": "<input-directory>",
+  "output_directory": "<output-directory>",
+  "measurements_member": "<measurements-member>",
+  "transfusions_member": "<transfusions-member>",
+  "admissions_member": "<admissions-member>",
+  "input_version": "<input-version>",
+  "cohort_mode": "full_cohort"
+}

@@ -1,0 +1,6 @@
+numpy==2.3.2
+scipy==1.16.1
+threadpoolctl==3.6.0
+pyreadstat==1.3.1
+# Read SAS data through the pandas interface to pyreadstat.
+pandas

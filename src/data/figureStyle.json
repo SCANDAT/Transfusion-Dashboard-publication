@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "columns": 4,
+  "windowMinutes": 720,
+  "baselineMinute": -60,
+  "endpointMinute": 60,
+  "interval": "pointwise_95",
+  "pressureAxes": "equal_spans_independent_centres",
+  "panels": [
+    {
+      "code": "ARTm",
+      "letter": "A",
+      "name": "Mean arterial pressure",
+      "shortName": "MAP",
+      "unit": "mmHg",
+      "changeUnit": "mmHg",
+      "color": "#0F5B63"
+    },
+    {
+      "code": "ARTs",
+      "letter": "B",
+      "name": "Systolic arterial pressure",
+      "shortName": "SBP",
+      "unit": "mmHg",
+      "changeUnit": "mmHg",
+      "color": "#216E79"
+    },
+    {
+      "code": "ARTd",
+      "letter": "C",
+      "name": "Diastolic arterial pressure",
+      "shortName": "DBP",
+      "unit": "mmHg",
+      "changeUnit": "mmHg",
+      "color": "#407F86"
+    },
+    {
+      "code": "HR",
+      "letter": "D",
+      "name": "Heart rate",
+      "shortName": "HR",
+      "unit": "beats/min",
+      "changeUnit": "beats/min",
+      "color": "#B14C3D"
+    },
+    {
+      "code": "FIO2",
+      "letter": "E",
+      "name": "Fraction of inspired oxygen",
+      "shortName": "FiO₂",
+      "unit": "%",
+      "changeUnit": "%",
+      "color": "#4F6297"
+    },
+    {
+      "code": "SPO2",
+      "letter": "F",
+      "name": "Peripheral oxygen saturation",
+      "shortName": "SpO₂",
+      "unit": "%",
+      "changeUnit": "%",
+      "color": "#6B5790"
+    },
+    {
+      "code": "VE",
+      "letter": "G",
+      "name": "Minute ventilation",
+      "shortName": "VE",
+      "unit": "L/min",
+      "changeUnit": "L/min",
+      "color": "#AA7834"
+    }
+  ],
+  "unitLabelStatus": "CLINICAL_UNITS_CONFIRMED"
+}

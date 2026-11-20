@@ -1,0 +1,57 @@
+﻿.study-population .population-controls { margin: 12px 0 8px; }
+.study-population .population-summary { gap: 12px; margin: 16px 0 12px; }
+.study-population .summary-card { padding: 14px 16px; }
+.study-population .summary-card strong { font-size: 1.5rem; margin-top: 6px; }
+.study-tables { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px; align-items: start; margin-top: 28px; }
+.study-population .study-table-section { margin: 0; padding: 0; border: 0; border-radius: 0; background: transparent; box-shadow: none; color: #252525; }
+.study-population .study-table-section > h3 { margin: 0 0 4px; font-size: 1.05rem; font-weight: 700; color: #252525; }
+.study-table-subtitle { font-size: .77rem; color: #575757; line-height: 1.5; margin: 0 0 14px; }
+.study-population .publication-table { min-width: 0; width: 100%; table-layout: fixed; font-size: .8rem; border-top: 1px solid #505050; border-bottom: 1px solid #505050; color: #252525; }
+.study-population .study-label-column { width: 56%; }
+.study-population .study-number-column { width: 18%; }
+.study-population .study-bracket-column { width: 26%; }
+.study-population .publication-table th, .study-population .publication-table td { padding: 5px 7px; border-bottom: 0; line-height: 1.4; vertical-align: baseline; color: #252525; }
+.study-population .publication-table tbody th { font-weight: 400; }
+.study-population .publication-table td { font-variant-numeric: tabular-nums; }
+.study-population .publication-table .summary-number { text-align: right; padding-right: 5px; white-space: nowrap; }
+.study-population .publication-table .summary-parenthesis { text-align: left; padding-left: 5px; white-space: nowrap; }
+.study-population .publication-table .summary-text { white-space: normal; overflow-wrap: anywhere; }
+.study-population .publication-table .summary-heading { text-align: left; }
+.study-population .publication-table thead th { color: #252525; background: #eeeeed; font-weight: 700; font-size: .77rem; }
+.study-population .publication-table .table-section-row th { padding: 7px; background: #eeeeed; color: #252525; font-weight: 700; border-top: 7px solid #f7f9f6; }
+.study-population .publication-table .count-section-row .summary-number { padding-right: 5px; }
+.study-population .publication-table .count-section-row .summary-parenthesis { padding-left: 5px; }
+.study-population .table-section-row th span { float: right; font-size: .74rem; font-weight: 400; margin-left: 8px; }
+.study-component-tables { border-top: 1px solid #505050; border-bottom: 1px solid #505050; }
+.study-unit-group { margin: 0; }
+.study-population .study-unit-group .publication-table { border: 0; }
+.study-population .study-unit-group + .study-unit-group thead th { border-top: 7px solid #f7f9f6; }
+.study-population .study-unit-group thead th { padding-top: 7px; padding-bottom: 7px; }
+.study-population .study-denominator { font-size: .7rem; color: #575757; line-height: 1.5; margin: 6px 7px; }
+.study-population .category-note { font-size: .7rem; font-weight: 400; color: #575757; line-height: 1.4; }
+.study-table-notes { margin-top: 12px; color: #575757; font-size: .72rem; line-height: 1.55; }
+.study-table-notes p { margin: 6px 0; }
+.study-population .supporting-section { padding: 18px 20px; margin: 20px 0; }
+@media (max-width: 1000px) {
+  .study-tables { grid-template-columns: minmax(0, 1fr); gap: 26px; }
+}
+@media (max-width: 540px) {
+  .study-population .population-summary { gap: 8px; }
+  .study-population .summary-card { padding: 10px; }
+  .study-population .summary-card strong { font-size: 1.3rem; }
+  .study-population .publication-table { font-size: .76rem; }
+  .study-population .study-label-column { width: 49%; }
+  .study-population .study-number-column { width: 19%; }
+  .study-population .study-bracket-column { width: 32%; }
+  .study-population .publication-table th, .study-population .publication-table td { padding: 5px 3px; }
+}
+@media print {
+  .study-tables { display: block; }
+  .study-population .study-table-section { margin: 12px 0; }
+  .study-population .publication-table { break-inside: auto; }
+  .study-population .publication-table tr { break-inside: avoid; }
+}
+
+.study-population .publication-table .study-column-definitions { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+
+.study-population .publication-table tbody > .count-section-row:first-child th { border-top: 0; }
